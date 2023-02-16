@@ -1,6 +1,6 @@
 import "./loadEnvironment.js";
 import express from "express";
-import chalk from "chalk";
+import thingsKnown from "./data/data.js";
 
 const app = express();
 
@@ -10,4 +10,6 @@ const port = process.env.PORT ?? 4001;
 
 const server = app.listen(port);
 
-app.get("/");
+app.get("/", (req, res) => {
+  res.status(200).json({ thingsKnown });
+});
