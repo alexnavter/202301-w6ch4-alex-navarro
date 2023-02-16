@@ -1,6 +1,5 @@
 import { type ThingsStructure } from "./types";
-
-const thingKnown: ThingsStructure = [
+const thingsKnown: ThingsStructure = [
   {
     id: 1,
     name: "running",
@@ -15,4 +14,4 @@ const thingKnown: ThingsStructure = [
   },
 ];
 
-export default thingKnown;
+export default thingsKnown;
