@@ -1,6 +1,6 @@
 import "./loadEnvironment.js";
 import express from "express";
-import chalk from "chalk";
+import thingsRouter from "./routes/router.js";
 
 const app = express();
 
@@ -10,4 +10,4 @@ const port = process.env.PORT ?? 4001;
 
 const server = app.listen(port);
 
-app.get("/");
+app.get("/things", thingsRouter);
