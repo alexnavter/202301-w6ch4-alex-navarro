@@ -6,8 +6,8 @@ const app = express();
 
 app.use(express.json());
 
-const port = process.env.PORT ?? 4001;
+const port = process.env.PORT ?? 4003;
 
-const server = app.listen(port);
+app.use("/", thingsRouter);
 
-app.get("/things", thingsRouter);
+app.listen(port);
